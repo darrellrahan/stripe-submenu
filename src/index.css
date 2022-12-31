@@ -12,10 +12,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url(../public/images/body-bg.svg);
+  background: url(./images/body-bg.svg);
   background-repeat: no-repeat;
   background-size: 100rem;
   text-transform: capitalize;
+  background-color: #f1f5f8;
 }
 
 code {
@@ -88,7 +89,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 10rem;
 }
 
 .logo {
@@ -128,7 +129,7 @@ header {
   border: 1px solid #fff;
   border-radius: 4px;
   transition: all 0.3s linear;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .dropdown::after {
@@ -166,7 +167,7 @@ header {
   bottom: 0;
   left: 0;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
   padding: 1.25rem 2rem;
 }
 
@@ -207,30 +208,38 @@ header {
   margin: 2.5rem 0;
 }
 
+/* section */
+
+section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 10rem;
+}
+
+.section-left {
+  width: 50%;
+}
+
+.section-left h1 {
+  font-size: 5rem;
+  color: #324d67;
+  text-transform: none;
+}
+
+.section-left p {
+  color: #324d67;
+  line-height: 2;
+  font-size: 20px;
+  text-transform: none;
+  margin: 2rem 0;
+}
+
 /* responsive */
 
-@media (max-width: 1000px) {
-  header {
-    display: block;
-  }
-
-  header .sidebar-btn {
-    display: flex;
-  }
-
-  header .start {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  header .center {
-    display: none;
-  }
-
-  header .end {
-    display: none;
-  }
+@media (max-width: 1200px) {
+  /* global */
 
   .page-title {
     font-size: 15px;
@@ -239,5 +248,56 @@ header {
   .link {
     font-size: 15px;
     margin: 0.25rem 0;
+  }
+
+  /* header */
+
+  header {
+    display: block;
+    padding: 1rem 2rem;
+  }
+
+  .sidebar-btn {
+    display: flex;
+  }
+
+  .start {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .center {
+    display: none;
+  }
+
+  .end {
+    display: none;
+  }
+
+  /* section */
+
+  section {
+    padding: 1rem 2rem;
+  }
+
+  .section-right {
+    display: none;
+  }
+
+  .section-left {
+    width: 100%;
+  }
+
+  .section-left h1 {
+    font-size: 3.5rem;
+  }
+
+  .section-left p {
+    color: #324d67;
+    line-height: 2;
+    font-size: 16px;
+    text-transform: none;
+    margin: 2rem 0;
   }
 }

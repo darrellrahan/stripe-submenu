@@ -10,7 +10,7 @@ const Header = () => {
     <header>
       <div className="start header-collapse">
         <a href="#" className="logo">
-          Lo<span>go</span>
+          stripe
         </a>
         <button className="sidebar-btn primary-btn" onClick={openSidebar}>
           <FaBars />
